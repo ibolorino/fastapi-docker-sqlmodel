@@ -4,6 +4,6 @@ from app.config import get_settings
 
 settings = get_settings()
 
-engine = create_engine(settings.DATABASE_URI)
+engine = create_engine(settings.DATABASE_URI, echo=True)
 
-local_session = Session(autocommit=False, autoflush=False, bind=engine)
+local_session = Session(engine)
