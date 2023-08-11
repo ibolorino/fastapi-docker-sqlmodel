@@ -15,5 +15,5 @@ class HeroBase(SQLModel):
 class Hero(BaseUUIDModel, HeroBase, table=True):
     team: "Team" = Relationship(  # noqa: F821
         back_populates="heroes",
-        sa_relationship={"lazy": "joined", "primaryjoin": "Hero.team_id==Team.id"},
+        sa_relationship_kwargs={"lazy": "joined"},
     )

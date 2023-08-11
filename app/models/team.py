@@ -12,5 +12,5 @@ class TeamBase(SQLModel):
 
 class Team(BaseUUIDModel, TeamBase, table=True):
     heroes: List["Hero"] = Relationship(  # noqa: F821
-        back_populates="team", sa_relationship_kwargs={"lazy": "selctin"}
+        back_populates="team", sa_relationship_kwargs={"lazy": "selectin"}
     )

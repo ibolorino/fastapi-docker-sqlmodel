@@ -1,7 +1,7 @@
 from typing import List, Optional
 from uuid import UUID
 
-from app.models.hero import Hero as HeroBase
+from app.models.hero import HeroBase
 from app.models.team import TeamBase
 
 
